@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mohibullah Barakzai | Portfolio</title>
   <meta name="description" content="Penetration Tester and Security Researcher specializing in offensive security, exploit development, and red teaming.">
-  <meta name="keywords" content="Penetration Tester, Security Researcher, Cybersecurity, Red Team, Exploit Development, OSCP, OSEP, OSWE, OSEE">
   <meta name="author" content="Mohibullah Barakzai">
 
   <!-- Favicons -->
@@ -66,29 +65,32 @@
                   radial-gradient(600px at 80% 0%, rgba(32,201,151,0.1), transparent);
       border-bottom: 1px solid var(--border);
     }
-    .hero h2 { font-size: 2rem; margin: 0 0 10px; }
+    .hero h2 { font-size: 2rem; margin: 0 0 10px; font-weight: 700; }
     .hero p { margin: 0; color: var(--muted); max-width: 750px; }
 
-    section { padding: 30px 0; }
+    section { padding: 36px 0; }
     .card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 10px;
       padding: 20px;
       box-shadow: 0 4px 16px var(--shadow);
+      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
     }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px var(--shadow); border-color: #3b82f622; }
     .grid { display: grid; gap: 20px; }
     @media (min-width: 860px) { .grid.cols-2 { grid-template-columns: 1fr 1fr; } }
 
-    h3 { margin: 0 0 12px; font-size: 1.2rem; }
-    h4 { margin: 0 0 10px; font-size: 1rem; }
+    h3 { margin: 0 0 14px; font-size: 1.2rem; font-weight: 700; border-bottom: 2px solid var(--border); padding-bottom: 6px; display: inline-flex; align-items: center; gap: 10px; }
+    h4 { margin: 0 0 10px; font-size: 1rem; font-weight: 600; color: #d0d7de; }
     .muted { color: var(--muted); }
     ul { list-style: none; padding: 0; margin: 0; }
     li + li { margin-top: 8px; }
     .tag {
       display: inline-block; padding: 4px 10px;
       border: 1px solid var(--border); border-radius: 999px;
-      background: #0e131a; color: var(--muted); font-size: 0.85rem;
+      background: #0e131a; color: var(--muted); font-size: 0.75rem;
+      text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;
     }
     footer {
       border-top: 1px solid var(--border);
@@ -119,7 +121,7 @@
     <div class="container">
       <h2><i class="fa-solid fa-shield-halved"></i> Penetration Tester & Security Researcher</h2>
       <p>
-        Offensive security specialist with expertise in exploit development, red teaming, and adversarial simulation. 
+        Offensive security specialist with expertise in exploit development, red teaming, and adversarial simulation.
         Dedicated to uncovering complex attack paths and helping organizations build resilient defenses through deep research and practical security engineering.
       </p>
     </div>
@@ -133,16 +135,16 @@
         <h3><i class="fa-solid fa-user"></i> About Me</h3>
         <p>
           Penetration Tester and Security Researcher with a strong foundation in networking, Linux, and
-          cybersecurity. Certified in <strong>CompTIA Security+, CEH, Google Cybersecurity, CCNA, Packet Tracer, Linux, and Cybersecurity Hacker Exposed</strong>. 
+          cybersecurity. Certified in <strong>CompTIA Security+, CEH, Google Cybersecurity, CCNA, Packet Tracer, Linux, and Cybersecurity Hacker Exposed</strong>.
           Skilled in <strong>C++ and JavaScript</strong> for exploit development, automation, and web security testing.
         </p>
         <p>
-          I am committed to advancing my expertise through the <strong>Offensive Security certification track</strong>, 
-          with a clear roadmap: <em>OSCP → OSEP → OSWE/OSED → OSCE3 → OSEE</em>. 
+          I am committed to advancing my expertise through the <strong>Offensive Security certification track</strong>,
+          with a clear roadmap: <em>OSCP → OSEP → OSWE/OSED → OSCE3 → OSEE</em>.
           This progression reflects my dedication to mastering penetration testing, exploit development, and advanced red team operations.
         </p>
         <p>
-          Passionate about <strong>red teaming, exploit development, and simulating nation‑state adversaries</strong>, 
+          Passionate about <strong>red teaming, exploit development, and simulating nation‑state adversaries</strong>,
           I focus on building both offensive and defensive skills to operate effectively in complex enterprise environments.
         </p>
       </div>
@@ -153,19 +155,19 @@
       <h3><i class="fa-solid fa-flask"></i> Projects</h3>
       <div class="grid cols-2">
         <div class="card">
-          <h4><i class="fa-solid fa-microscope"></i> ShadowSpy‑Lab</h4>
-          <p class="muted">Demonstrations of exploits, vulnerabilities, custom exploit creation, and malware reverse engineering.</p>
+          <h4><i class="fa-solid fa-microscope"></i> ShadowOps‑Lab</h4>
+          <p class="muted">Executive‑level red team lab demonstrating reproducible, audit‑grade security systems with applications across enterprise and healthcare domains.</p>
           <ul><li><span class="tag">Exploit Dev</span> <span class="tag">Reverse Engineering</span></li></ul>
         </div>
         <div class="card">
           <h4><i class="fa-brands fa-apple"></i> Apple Bug Bounty</h4>
-          <p class="muted">Discovery and responsible disclosure of vulnerabilities to Apple’s Bug Bounty program.</p>
+          <p class="muted">Reported and validated vulnerability in Apple’s ImageIO framework as part of the Apple Security Bounty program.</p>
           <ul><li><span class="tag">AppSec</span> <span class="tag">Bug Bounty</span></li></ul>
         </div>
         <div class="card">
-          <h4><i class="fa-solid fa-network-wired"></i> Active Directory Attacks & Defense Lab</h4>
-          <p class="muted">Adversary simulation in AD environments, mapping paths with BloodHound, and testing blue‑team detections and mitigations.</p>
-          <ul><li><span class="tag">AD</span> <span class="tag">Red/Blue</span> <span class="tag">Detection</span></li></ul>
+          <h4><i class="fa-solid fa-network-wired"></i> Active Directory Attack & Defense Lab</h4>
+          <p class="muted">Advanced lab environment for building and testing AD attack chains and defense strategies to simulate enterprise‑level adversaries.</p>
+          <ul><li><span class="tag">Red/Blue</span> <span class="tag">Detection</span></li></ul>
         </div>
       </div>
     </section>
@@ -175,12 +177,12 @@
       <h3><i class="fa-solid fa-code"></i> Skills</h3>
       <div class="grid cols-2">
         <div class="card">
-          <h4><i class="fa-solid fa-terminal"></i> Core Skills</h4>
+          <h4><i class="fa-solid fa-terminal"></i> Core skills</h4>
           <ul>
             <li><strong>Programming:</strong> Python, Bash, PowerShell, C++, JavaScript</li>
-            <li><strong>Operating Systems:</strong> Windows, Linux</li>
+            <li><strong>Operating systems:</strong> Windows, Linux</li>
             <li><strong>Tools:</strong> Burp Suite, Nmap, Wireshark, Metasploit, BloodHound, CrackMapExec, Mimikatz</li>
-            <li><strong>Concepts:</strong> Web App Security, Reverse Engineering, Malware Analysis, Exploit Development, Active Directory, Red Team</li>
+            <li><strong>Focus areas:</strong> Web App Security, Reverse Engineering, Malware Analysis, Exploit Development, Active Directory, Red Team</li>
           </ul>
         </div>
         <div class="card">
@@ -200,7 +202,7 @@
 
     <!-- Professional Summary -->
     <section id="summary">
-      <h3><i class="fa-solid fa-briefcase"></i> Professional Summary</h3>
+      <h3><i class="fa-solid fa-briefcase"></i> Professional summary</h3>
       <div class="card">
         <p><strong>Mohibullah Barakzai</strong><br>
         Penetration Tester | Security Researcher</p>
@@ -219,7 +221,7 @@
       <h3><i class="fa-solid fa-envelope"></i> Contact</h3>
       <div class="card">
         <p>Connect with me on <a href="https://www.linkedin.com/in/mohibullah-barakzai" target="_blank" rel="noopener">LinkedIn</a>.</p>
-        <!-- Add more links when ready:
+        <!-- Optional:
         <p><a href="https://github.com/Mohibullah-Barakzai" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a></p>
         <p><a href="mailto:you@example.com"><i class="fa-solid fa-paper-plane"></i> Email</a></p>
         -->
