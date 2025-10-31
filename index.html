@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mohibullah Barakzai | Portfolio</title>
-  <meta name="description" content="Penetration Tester and Security Researcher specializing in offensive security, exploit development, and red teaming.">
+  <meta name="description" content="Penetration Tester and Security Researcher with hands-on experience in exploit development, red teaming, and adversarial simulation.">
   <meta name="author" content="Mohibullah Barakzai">
 
   <!-- Favicons -->
@@ -20,82 +20,47 @@
   <!-- Styles -->
   <style>
     :root {
-      --bg: #0d1117;
-      --card: #161b22;
-      --text: #e6edf3;
-      --muted: #8b949e;
-      --accent: #2f81f7;
-      --border: #30363d;
-      --shadow: rgba(0,0,0,0.4);
-      --maxw: 1000px;
+      --bg:#0d1117; --card:#161b22; --text:#e6edf3; --muted:#8b949e;
+      --accent:#2f81f7; --border:#30363d; --shadow:rgba(0,0,0,0.4);
+      --maxw:1000px;
     }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0; padding: 0;
-      font-family: 'Inter', sans-serif;
-      background: var(--bg); color: var(--text);
-      line-height: 1.6;
-    }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
 
-    header {
-      background: #0d1117;
-      border-bottom: 1px solid var(--border);
-      position: sticky; top: 0; z-index: 10;
-    }
-    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
-    .header-inner {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 16px 0;
-    }
-    .brand { display: flex; align-items: center; gap: 10px; }
-    .brand-logo {
-      width: 36px; height: 36px; border-radius: 6px;
-      background: url('favicon-32.ico') no-repeat center/cover;
-      border: 1px solid var(--border);
-    }
-    .brand h1 { margin: 0; font-size: 1.2rem; font-weight: 700; }
-    nav a { margin-left: 18px; font-weight: 600; color: var(--muted); }
-    nav a:hover, nav a.active { color: var(--text); }
+    header { background:#0d1117; border-bottom:1px solid var(--border); position:sticky; top:0; z-index:10; }
+    .container { max-width:var(--maxw); margin:0 auto; padding:0 20px; }
+    .header-inner { display:flex; justify-content:space-between; align-items:center; padding:16px 0; }
+    .brand { display:flex; align-items:center; gap:10px; }
+    .brand-logo { width:56px; height:56px; border-radius:6px; background:url('favicon-32.ico') no-repeat center/cover; border:1px solid var(--border); }
+    .brand h1 { margin:0; font-size:1.8rem; font-weight:700; }
+    nav a { margin-left:18px; font-weight:600; color:var(--muted); }
+    nav a:hover, nav a.active { color:var(--text); }
 
-    .hero {
-      padding: 50px 0 20px;
-      background: radial-gradient(800px at 20% 20%, rgba(47,129,247,0.1), transparent),
-                  radial-gradient(600px at 80% 0%, rgba(32,201,151,0.1), transparent);
-      border-bottom: 1px solid var(--border);
-    }
-    .hero h2 { font-size: 2rem; margin: 0 0 10px; font-weight: 700; }
-    .hero p { margin: 0; color: var(--muted); max-width: 750px; }
+    .hero { padding:50px 0 20px; border-bottom:1px solid var(--border); }
+    .hero h2 { font-size:2rem; margin:0 0 10px; font-weight:700; }
+    .hero p { margin:0; color:var(--muted); max-width:750px; }
 
-    section { padding: 36px 0; }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 4px 16px var(--shadow);
-      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
-    }
-    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px var(--shadow); border-color: #3b82f622; }
-    .grid { display: grid; gap: 20px; }
-    @media (min-width: 860px) { .grid.cols-2 { grid-template-columns: 1fr 1fr; } }
+    section { padding:36px 0; }
+    .card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:20px; box-shadow:0 4px 16px var(--shadow); }
+    .grid { display:grid; gap:20px; }
+    @media (min-width:860px) { .grid.cols-2 { grid-template-columns:1fr 1fr; } }
 
-    h3 { margin: 0 0 14px; font-size: 1.2rem; font-weight: 700; border-bottom: 2px solid var(--border); padding-bottom: 6px; display: inline-flex; align-items: center; gap: 10px; }
-    h4 { margin: 0 0 10px; font-size: 1rem; font-weight: 600; color: #d0d7de; }
-    .muted { color: var(--muted); }
-    ul { list-style: none; padding: 0; margin: 0; }
-    li + li { margin-top: 8px; }
-    .tag {
-      display: inline-block; padding: 4px 10px;
-      border: 1px solid var(--border); border-radius: 999px;
-      background: #0e131a; color: var(--muted); font-size: 0.75rem;
-      text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;
-    }
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 20px 0; text-align: center; color: var(--muted);
-    }
+    h3 { margin:0 0 14px; font-size:1.2rem; font-weight:700; border-bottom:2px solid var(--border); padding-bottom:6px; display:inline-flex; align-items:center; gap:10px; }
+    h4 { margin:0 0 10px; font-size:1rem; font-weight:600; color:#d0d7de; }
+    .muted { color:var(--muted); }
+    ul { list-style:none; padding:0; margin:0; }
+    li + li { margin-top:8px; }
+    .tag { display:inline-block; padding:4px 10px; border:1px solid var(--border); border-radius:999px; background:#0e131a; color:var(--muted); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.06em; font-weight:600; }
+
+    /* Colorful icons (controlled palette) */
+    .fa-user{color:#f39c12;} .fa-flask{color:#2ecc71;} .fa-code{color:#3498db;}
+    .fa-briefcase{color:#9b59b6;} .fa-envelope{color:#e74c3c;}
+    .fa-microscope{color:#1abc9c;} .fa-apple{color:#ffffff;} .fa-network-wired{color:#e67e22;}
+    .fa-award{color:#f1c40f;} .fa-graduation-cap{color:#2ecc71;} .fa-sitemap{color:#e84393;} .fa-terminal{color:#00cec9;}
+
+    footer { border-top:1px solid var(--border); padding:20px 0; text-align:center; color:var(--muted); }
   </style>
 </head>
 <body>
@@ -121,7 +86,7 @@
     <div class="container">
       <h2><i class="fa-solid fa-shield-halved"></i> Penetration Tester & Security Researcher</h2>
       <p>
-        Offensive security specialist with expertise in exploit development, red teaming, and adversarial simulation.
+        Penetration Tester and Security Researcher with hands‑on experience in exploit development, red teaming, and adversarial simulation.
         Focused on uncovering complex attack paths and enabling resilient defenses through research‑driven engineering.
       </p>
     </div>
@@ -134,18 +99,15 @@
       <div class="card">
         <h3><i class="fa-solid fa-user"></i> About Me</h3>
         <p>
-          Penetration Tester and Security Researcher with a strong foundation in networking, Linux, and
-          cybersecurity. Certified in <strong>CompTIA Security+, CEH, Google Cybersecurity, CCNA, Linux, Cybersecurity Hacker Exposed, and Introduction to Packet Tracer</strong>.
+          Penetration Tester and Security Researcher with a strong foundation in networking, Linux, and cybersecurity.
+          Certified in <strong>CompTIA Security+, CEH, Google Cybersecurity, CCNA, Linux, Cybersecurity Hacker Exposed, and Introduction to Packet Tracer</strong>.
           Skilled in <strong>C++ and JavaScript</strong> for exploit development, automation, and web security testing.
         </p>
         <p>
-          I am committed to advancing my expertise through the <strong>Offensive Security certification track</strong>,
-          with a clear roadmap: <em>OSCP → OSEP → OSWE/OSED → OSCE3 → OSEE</em>.
-          This progression reflects my dedication to mastering penetration testing, exploit development, and advanced red team operations.
+          Advancing through the <strong>Offensive Security certification track</strong>: <em>OSCP → OSEP → OSWE/OSED → OSCE3 → OSEE</em>.
         </p>
         <p>
-          Passionate about <strong>red teaming, exploit development, and simulating nation‑state adversaries</strong>,
-          I focus on building both offensive and defensive skills to operate effectively in complex enterprise environments.
+          Passionate about <strong>red teaming, exploit development, and simulating nation‑state adversaries</strong>.
         </p>
       </div>
     </section>
@@ -202,7 +164,9 @@
         <div class="card">
           <h4><i class="fa-solid fa-graduation-cap"></i> Platforms & labs</h4>
           <ul>
-            <li><strong>Learning platforms:</strong> TryHackMe</li>
+            <li><strong>Learning platforms:</strong> TryHackMe, Hack The Box, PentesterLab</li>
+            <li><strong>Crowdsourced bug bounty:</strong> HackerOne, Bugcrowd</li>
+            <li><strong>Competitions:</strong> EC‑Council CTF</li>
             <li><strong>Practice labs:</strong> Custom AD attack/defense lab, exploit dev sandbox</li>
           </ul>
         </div>
@@ -220,10 +184,9 @@
     <section id="summary">
       <h3><i class="fa-solid fa-briefcase"></i> Professional summary</h3>
       <div class="card">
-        <p><strong>Mohibullah Barakzai</strong><br>
-        Penetration Tester | Security Researcher</p>
+        <p><strong>Mohibullah Barakzai</strong><br>Penetration Tester | Security Researcher</p>
         <ul>
-          <li><strong>Certifications:</strong> CompTIA Security+, CEH, Google Cybersecurity, CCNA, Linux, Cybersecurity Hacker Exposed, Introduction to Packet Tracer</li>
+          <li><strong>Certifications:</strong> Security+, CEH, Google Cybersecurity, CCNA, Linux, Cybersecurity Hacker Exposed, Introduction to Packet Tracer</li>
           <li><strong>Core strengths:</strong> Networking, Linux, exploit development, adversary simulation, red teaming</li>
           <li><strong>Languages:</strong> C++, JavaScript (automation, exploit tooling, web security testing)</li>
           <li><strong>Roadmap:</strong> OSCP → OSEP → OSWE/OSED → OSCE3 → OSEE</li>
@@ -237,8 +200,8 @@
       <h3><i class="fa-solid fa-envelope"></i> Contact</h3>
       <div class="card">
         <p>Connect with me on <a href="https://www.linkedin.com/in/mohibullah-barakzai" target="_blank" rel="noopener">LinkedIn</a>.</p>
-        <!-- Optional:
-        <p><a href="https://github.com/Mohibullah-Barakzai" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a></p>
+        <!-- Optional links:
+        <p><a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a></p>
         <p><a href="mailto:you@example.com"><i class="fa-solid fa-paper-plane"></i> Email</a></p>
         -->
       </div>
