@@ -14,16 +14,6 @@
   <link rel="icon" href="favicon-32.ico" sizes="32x32" type="image/x-icon">
   <link rel="icon" href="favicon-16.ico" sizes="16x16" type="image/x-icon">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Mohibullah Barakzai | Portfolio">
-  <meta property="og:description" content="Penetration Tester and Security Researcher specializing in offensive security, exploit development, and red teaming.">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Mohibullah Barakzai | Portfolio">
-  <meta name="twitter:description" content="Penetration Tester and Security Researcher specializing in offensive security, exploit development, and red teaming.">
-
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -90,7 +80,8 @@
     .grid { display: grid; gap: 20px; }
     @media (min-width: 860px) { .grid.cols-2 { grid-template-columns: 1fr 1fr; } }
 
-    h3 { margin: 0 0 12px; font-size: 1.1rem; }
+    h3 { margin: 0 0 12px; font-size: 1.2rem; }
+    h4 { margin: 0 0 10px; font-size: 1rem; }
     .muted { color: var(--muted); }
     ul { list-style: none; padding: 0; margin: 0; }
     li + li { margin-top: 8px; }
@@ -125,53 +116,54 @@
 
   <!-- Hero -->
   <section class="hero">
-  <div class="container">
-    <h2><i class="fa-solid fa-shield-halved"></i> Penetration Tester & Security Researcher</h2>
-    <p>
-      Offensive security specialist with expertise in exploit development, red teaming, and adversarial simulation. 
-      Dedicated to uncovering complex attack paths and helping organizations build resilient defenses through deep research and practical security engineering.
-    </p>
-  </div>
-</section>
+    <div class="container">
+      <h2><i class="fa-solid fa-shield-halved"></i> Penetration Tester & Security Researcher</h2>
+      <p>
+        Offensive security specialist with expertise in exploit development, red teaming, and adversarial simulation. 
+        Dedicated to uncovering complex attack paths and helping organizations build resilient defenses through deep research and practical security engineering.
+      </p>
+    </div>
+  </section>
 
   <!-- Main -->
   <main class="container">
     <!-- About -->
-<section id="about">
-  <div class="card">
-    <h3><i class="fa-solid fa-user"></i> About Me</h3>
-    <p>
-      Penetration Tester and Security Researcher with a strong foundation in networking, Linux, and cybersecurity. 
-      Certified in <strong>CompTIA Security+, CEH, Google Cybersecurity, CCNA, Packet Tracer, Linux, and Cybersecurity Hacker Exposed</strong>. 
-      Skilled in <strong>C++ and JavaScript</strong> for exploit development, automation, and web security testing.
-    </p>
-    <p>
-      I am committed to advancing my expertise through the <strong>Offensive Security certification track</strong>, 
-      with a clear roadmap: <em>OSCP → OSEP → OSWE/OSED → OSCE3 → OSEE</em>. 
-      This progression reflects my dedication to mastering penetration testing, exploit development, and advanced red team operations.
-    </p>
-    <p>
-      Passionate about <strong>red teaming, exploit development, and simulating nation‑state adversaries</strong>, 
-      I focus on building both offensive and defensive skills to operate effectively in complex enterprise environments.
-    </p>
-  </div>
-</section>
+    <section id="about">
+      <div class="card">
+        <h3><i class="fa-solid fa-user"></i> About Me</h3>
+        <p>
+          Penetration Tester and Security Researcher with a strong foundation in networking, Linux, and
+          cybersecurity. Certified in <strong>CompTIA Security+, CEH, Google Cybersecurity, CCNA, Packet Tracer, Linux, and Cybersecurity Hacker Exposed</strong>. 
+          Skilled in <strong>C++ and JavaScript</strong> for exploit development, automation, and web security testing.
+        </p>
+        <p>
+          I am committed to advancing my expertise through the <strong>Offensive Security certification track</strong>, 
+          with a clear roadmap: <em>OSCP → OSEP → OSWE/OSED → OSCE3 → OSEE</em>. 
+          This progression reflects my dedication to mastering penetration testing, exploit development, and advanced red team operations.
+        </p>
+        <p>
+          Passionate about <strong>red teaming, exploit development, and simulating nation‑state adversaries</strong>, 
+          I focus on building both offensive and defensive skills to operate effectively in complex enterprise environments.
+        </p>
+      </div>
+    </section>
 
     <!-- Projects -->
     <section id="projects">
+      <h3><i class="fa-solid fa-flask"></i> Projects</h3>
       <div class="grid cols-2">
         <div class="card">
-          <h3><i class="fa-solid fa-microscope"></i> ShadowSpy‑Lab</h3>
+          <h4><i class="fa-solid fa-microscope"></i> ShadowSpy‑Lab</h4>
           <p class="muted">Demonstrations of exploits, vulnerabilities, custom exploit creation, and malware reverse engineering.</p>
           <ul><li><span class="tag">Exploit Dev</span> <span class="tag">Reverse Engineering</span></li></ul>
         </div>
         <div class="card">
-          <h3><i class="fa-brands fa-apple"></i> Apple Bug Bounty</h3>
+          <h4><i class="fa-brands fa-apple"></i> Apple Bug Bounty</h4>
           <p class="muted">Discovery and responsible disclosure of vulnerabilities to Apple’s Bug Bounty program.</p>
           <ul><li><span class="tag">AppSec</span> <span class="tag">Bug Bounty</span></li></ul>
         </div>
         <div class="card">
-          <h3><i class="fa-solid fa-network-wired"></i> Active Directory Attacks & Defense Lab</h3>
+          <h4><i class="fa-solid fa-network-wired"></i> Active Directory Attacks & Defense Lab</h4>
           <p class="muted">Adversary simulation in AD environments, mapping paths with BloodHound, and testing blue‑team detections and mitigations.</p>
           <ul><li><span class="tag">AD</span> <span class="tag">Red/Blue</span> <span class="tag">Detection</span></li></ul>
         </div>
@@ -179,53 +171,53 @@
     </section>
 
     <!-- Skills -->
-<section id="skills">
-  <div class="grid cols-2">
-    <div class="card">
-      <h3><i class="fa-solid fa-code"></i> Core Skills</h3>
-      <ul>
-        <li><strong>Programming:</strong> Python, Bash, PowerShell</li>
-        <li><strong>Operating Systems:</strong> Windows, Linux</li>
-        <li><strong>Tools:</strong> Burp Suite, Nmap, Wireshark, Metasploit, BloodHound</li>
-        <li><strong>Concepts:</strong> Web App Security, Reverse Engineering, Malware Analysis, Exploit Development, Active Directory</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3><i class="fa-solid fa-award"></i> Certifications</h3>
-      <ul>
-        <li>CompTIA Security+</li>
-        <li>CEH</li>
-        <li>Google Cybersecurity</li>
-        <li>CCNA</li>
-        <li>Packet Tracer</li>
-        <li>Linux</li>
-        <li>Cybersecurity Hacker Exposed</li>
-      </ul>
-    </div>
-  </div>
-</section>
+    <section id="skills">
+      <h3><i class="fa-solid fa-code"></i> Skills</h3>
+      <div class="grid cols-2">
+        <div class="card">
+          <h4><i class="fa-solid fa-terminal"></i> Core Skills</h4>
+          <ul>
+            <li><strong>Programming:</strong> Python, Bash, PowerShell, C++, JavaScript</li>
+            <li><strong>Operating Systems:</strong> Windows, Linux</li>
+            <li><strong>Tools:</strong> Burp Suite, Nmap, Wireshark, Metasploit, BloodHound, CrackMapExec, Mimikatz</li>
+            <li><strong>Concepts:</strong> Web App Security, Reverse Engineering, Malware Analysis, Exploit Development, Active Directory, Red Team</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4><i class="fa-solid fa-award"></i> Certifications</h4>
+          <ul>
+            <li>CompTIA Security+</li>
+            <li>CEH</li>
+            <li>Google Cybersecurity</li>
+            <li>CCNA</li>
+            <li>Packet Tracer</li>
+            <li>Linux</li>
+            <li>Cybersecurity Hacker Exposed</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <!-- Summary -->
-<section id="summary">
-  <div class="card">
-    <h3><i class="fa-solid fa-briefcase"></i> Professional Summary</h3>
-    <p><strong>Mohibullah Barakzai</strong><br>
-    Penetration Tester | Security Researcher</p>
-
-    <ul>
-      <li>Certified in CompTIA Security+, CEH, Google Cybersecurity, CCNA, Packet Tracer, Linux, and Cybersecurity Hacker Exposed</li>
-      <li>Strong foundation in networking, Linux, and cybersecurity with hands‑on penetration testing experience</li>
-      <li>Skilled in C++ and JavaScript for exploit development, automation, and web security testing</li>
-      <li>Currently pursuing advanced Offensive Security certifications: OSCP → OSEP → OSWE/OSED → OSCE3 → OSEE</li>
-      <li>Passionate about red teaming, exploit development, and simulating nation‑state adversaries</li>
-    </ul>
-  </div>
-</section>
+    <!-- Professional Summary -->
+    <section id="summary">
+      <h3><i class="fa-solid fa-briefcase"></i> Professional Summary</h3>
+      <div class="card">
+        <p><strong>Mohibullah Barakzai</strong><br>
+        Penetration Tester | Security Researcher</p>
+        <ul>
+          <li>Certified in CompTIA Security+, CEH, Google Cybersecurity, CCNA, Packet Tracer, Linux, and Cybersecurity Hacker Exposed</li>
+          <li>Strong foundation in networking, Linux, and cybersecurity with hands‑on penetration testing experience</li>
+          <li>Skilled in C++ and JavaScript for exploit development, automation, and web security testing</li>
+          <li>Currently pursuing advanced Offensive Security certifications: OSCP → OSEP → OSWE/OSED → OSCE3 → OSEE</li>
+          <li>Passionate about red teaming, exploit development, and simulating nation‑state adversaries</li>
+        </ul>
+      </div>
+    </section>
 
     <!-- Contact -->
     <section id="contact">
+      <h3><i class="fa-solid fa-envelope"></i> Contact</h3>
       <div class="card">
-        <h3><i class="fa-solid fa-envelope"></i> Contact</h3>
         <p>Connect with me on <a href="https://www.linkedin.com/in/mohibullah-barakzai" target="_blank" rel="noopener">LinkedIn</a>.</p>
         <!-- Add more links when ready:
         <p><a href="https://github.com/Mohibullah-Barakzai" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a></p>
