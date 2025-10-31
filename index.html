@@ -1,207 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Required meta -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mohibullah Barakzai | Portfolio</title>
-  <meta name="description" content="Portfolio of Mohibullah Barakzai — Penetration Tester and Security Researcher specializing in offensive security, exploit development, and red teaming.">
+  <meta name="description" content="Penetration Tester and Security Researcher specializing in offensive security, exploit development, and red teaming.">
   <meta name="keywords" content="Penetration Tester, Security Researcher, Cybersecurity, Red Team, Exploit Development, OSCP, OSEP, OSWE, OSEE">
   <meta name="author" content="Mohibullah Barakzai">
 
-  <!-- Favicon setup -->
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="icon" href="favicon-32.ico" sizes="32x32" type="image/x-icon">
-<link rel="icon" href="favicon-16.ico" sizes="16x16" type="image/x-icon">
+  <!-- Favicon setup (use the files you’ve added to the repo root) -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon-32.ico" sizes="32x32" type="image/x-icon">
+  <link rel="icon" href="favicon-16.ico" sizes="16x16" type="image/x-icon">
 
-  <!-- Modern Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Open Graph (link previews for LinkedIn, WhatsApp, etc.) -->
+  <meta property="og:title" content="Mohibullah Barakzai | Portfolio">
+  <meta property="og:description" content="Penetration Tester and Security Researcher specializing in offensive security, exploit development, and red teaming.">
+  <meta property="og:type" content="website">
+  <!-- If you have a preview image in your repo (recommended 1200x630), set its absolute URL here -->
+  <!-- <meta property="og:image" content="https://your-domain.com/og-image.png"> -->
+  <!-- <meta property="og:url" content="https://your-domain.com/"> -->
 
-  <!-- Font Awesome for icons -->
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mohibullah Barakzai | Portfolio">
+  <meta name="twitter:description" content="Penetration Tester and Security Researcher specializing in offensive security, exploit development, and red teaming.">
+  <!-- <meta name="twitter:image" content="https://your-domain.com/og-image.png"> -->
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+  <!-- Internal CSS (wrapped correctly so it doesn’t render as text) -->
   <style>
-    /* your CSS here */
-  </style>
-</head>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #0d1117;
-      color: #e6edf3;
-      line-height: 1.7;
+    :root {
+      --bg: #0b0f14;
+      --card: #11161d;
+      --text: #e6edf3;
+      --muted: #a9b2bd;
+      --accent: #2f81f7;
+      --accent-2: #20c997;
+      --border: #1c232c;
+      --shadow: rgba(0,0,0,0.35);
+      --maxw: 1000px;
     }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Layout */
     header {
-      background: #161b22;
-      padding: 3rem 1rem;
-      text-align: center;
-      border-bottom: 2px solid #30363d;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #0b0f14 0%, #0c1117 100%);
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: saturate(120%) blur(4px);
     }
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-logo {
+      width: 36px; height: 36px; border-radius: 6px;
+      background: url('favicon-32.ico') no-repeat center/cover;
+      box-shadow: 0 2px 8px var(--shadow); border: 1px solid var(--border);
     }
-    header p {
-      font-size: 1.2rem;
-      color: #58a6ff;
-      font-weight: 500;
-      margin-top: 0.5rem;
+    .brand h1 { margin: 0; font-size: 1.25rem; font-weight: 700; letter-spacing: 0.2px; }
+
+    nav a { margin-left: 18px; font-weight: 600; color: var(--muted); }
+    nav a.active, nav a:hover { color: var(--text); }
+
+    .hero {
+      padding: 40px 0 10px;
+      border-bottom: 1px solid var(--border);
+      background: radial-gradient(1200px 500px at 10% 10%, rgba(47,129,247,0.08), transparent 60%),
+                  radial-gradient(900px 400px at 80% 0%, rgba(32,201,151,0.08), transparent 55%);
     }
-    section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: 3rem auto;
-      background: #161b22;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    .hero h2 { font-size: 2rem; margin: 0 0 10px; }
+    .hero p { margin: 0; color: var(--muted); max-width: 750px; }
+
+    /* Sections */
+    section { padding: 28px 0; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 6px 24px var(--shadow);
     }
-    h2 {
-      border-bottom: 2px solid #30363d;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1.5rem;
-      color: #58a6ff;
-    }
-    a {
-      color: #58a6ff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .button-link {
-      background: #58a6ff;
-      color: #fff;
-      padding: 10px 16px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s ease;
-    }
-    .button-link:hover {
-      background: #1f6feb;
-    }
-    .project-card {
-      background: #0d1117;
-      padding: 1.5rem;
-      border-radius: 6px;
-      margin-bottom: 1.5rem;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      border: 1px solid #30363d;
-    }
-    .project-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    ul li {
-      margin-bottom: 0.6rem;
-      list-style: none;
-    }
-    ul li i {
-      color: #58a6ff;
-      margin-right: 8px;
-    }
-    /* Skills grid */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-    }
-    .skills-grid li {
-      background: #0d1117;
-      padding: 1rem;
-      border-radius: 6px;
-      border: 1px solid #30363d;
-    }
-    /* Responsive tweaks */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
-    }
+    .grid { display: grid; gap: 18px; }
+    @media (min-width: 860px) { .grid.cols-2 { grid-template-columns: 1fr 1fr; } }
+
+    h3 { margin: 0 0 12px; font-size: 1.1rem; letter-spacing: 0.2px; }
+    .muted { color: var(--muted); }
+
+    /* Lists */
+    ul { list-style: none; margin: 0; padding: 0; }
+    li + li { margin-top: 8px; }
+    .tag { display: inline-block; padding: 4px 10px; border: 1px solid var(--border); border-radius: 999px; background: #0e131a; color: var(--muted); font-size: 0.9rem; }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--border); padding: 22px 0; color: var(--muted); text-align: center; }
   </style>
 </head>
 <body>
-
+  <!-- Header -->
   <header>
-    <h1>👨💻 Mohibullah Barakzai</h1>
-    <p>Penetration Tester | Security Researcher</p>
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-logo" aria-hidden="true"></div>
+        <h1>Mohibullah Barakzai</h1>
+      </div>
+      <nav>
+        <a href="#about" class="active">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#summary">Summary</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      Penetration Tester and Security Researcher with a strong foundation in networking, Linux, and
-      cybersecurity. Certified in <strong>CEH, CompTIA Security+, CCNA, Google Cybersecurity, and Linux</strong>.
-      Skilled in <strong>C++ and JavaScript</strong> for exploit development, automation, and web security testing.
-    </p>
-    <p>
-      I am committed to advancing my expertise through the <strong>Offensive Security certification track</strong>,
-      with a clear roadmap: <em>OSCP → OSEP → OSWE/OSED → OSCE3 → OSEE</em>. This progression reflects my
-      dedication to mastering penetration testing, exploit development, and advanced red team operations.
-    </p>
-    <p>
-      Passionate about <strong>red teaming, exploit development, and simulating nation‑state adversaries</strong>,
-      I focus on building both offensive and defensive skills to operate effectively in complex enterprise environments.
-    </p>
-  </section>
-
-  <section>
-    <h2>Projects</h2>
-
-    <div class="project-card">
-      <h3>🔍 ShadowOps-Lab</h3>
-      <p>Executive‑level red team lab demonstrating reproducible, audit‑grade security systems with applications across enterprise and healthcare domains.</p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h2>Penetration Tester & Security Researcher</h2>
+      <p>Offensive security, exploit development, and red teaming. Focused on practical adversarial simulation and building resilient defenses through deep research.</p>
     </div>
+  </section>
 
-    <div class="project-card">
-      <h3>🍏 Apple Bug Bounty</h3>
-      <p>Reported and validated vulnerability in Apple’s ImageIO framework as part of the Apple Security Bounty program.</p>
+  <!-- Main content -->
+  <main class="container">
+    <!-- About -->
+    <section id="about">
+      <div class="card">
+        <h3>About me</h3>
+        <p>I am a Penetration Tester and Security Researcher with hands‑on experience in vulnerability assessment, adversary emulation, and ethical hacking. Certifications include CEH, CompTIA Security+, CCNA CyberOps, and eJPT. I care about clarity, reproducibility, and sharing research that helps teams defend better.</p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>ShadowSpy‑Lab</h3>
+          <p class="muted">Demonstrations of exploits and vulnerabilities, custom exploit creation, and malware reverse engineering. Built to be reproducible for teaching and research.</p>
+          <ul>
+            <li><span class="tag">Exploit Dev</span> <span class="tag">RE</span> <span class="tag">Windows/Linux</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Apple Bug Bounty</h3>
+          <p class="muted">Discovery and responsible disclosure of vulnerabilities to Apple’s Bug Bounty program, with a focus on web and service misconfigurations.</p>
+          <ul>
+            <li><span class="tag">AppSec</span> <span class="tag">Bug Bounty</span> <span class="tag">Disclosure</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Active Directory Attacks & Defense Lab</h3>
+          <p class="muted">Adversary simulation in AD environments, mapping paths with BloodHound, and testing blue‑team detections and mitigations.</p>
+          <ul>
+            <li><span class="tag">AD</span> <span class="tag">Red/Blue</span> <span class="tag">Detection</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Core skills</h3>
+          <ul>
+            <li><strong>Programming:</strong> Python, Bash, PowerShell</li>
+            <li><strong>Operating Systems:</strong> Windows, Linux</li>
+            <li><strong>Tools:</strong> Burp Suite, Nmap, Wireshark, Metasploit, BloodHound</li>
+            <li><strong>Concepts:</strong> Active Directory, Web App Security, Reverse Engineering, Malware Analysis, Exploit Development</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Certifications</h3>
+          <ul>
+            <li>CEH</li>
+            <li>CompTIA Security+</li>
+            <li>CCNA CyberOps</li>
+            <li>eJPT</li>
+            <!-- Add OSCP/OSEP/OSWE/OSEE when ready -->
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional summary -->
+    <section id="summary">
+      <div class="card">
+        <h3>Professional summary</h3>
+        <p>I lead offensive security engagements with a focus on impact and clarity. My approach combines careful scoping, methodical recon/exploitation, and actionable reporting that maps findings to business risk. I enjoy building labs, proving exploit chains, and collaborating with defenders to turn research into practical detections and hardening.</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="card">
+        <h3>Contact</h3>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/mohibullah-barakzai" target="_blank" rel="noopener">LinkedIn</a>.</p>
+        <!-- Add more links as you publish them -->
+        <!-- <p><a href="https://github.com/mohibullah-barakzai" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a></p> -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Mohibullah Barakzai</p>
     </div>
-
-    <div class="project-card">
-      <h3>🛡️ Active Directory Attack & Defense Lab</h3>
-      <p>Advanced lab environment for building and testing AD attack chains and defense strategies to simulate enterprise‑level adversaries.</p>
-    </div>
-
-  </section>
-
-  <section>
-    <h2>Skills</h2>
-    <ul class="skills-grid">
-      <li><i class="fa-solid fa-shield-halved"></i> <strong>Pentesting Tools:</strong> Kali Linux, Burp Suite, Metasploit, BloodHound</li>
-      <li><i class="fa-solid fa-code"></i> <strong>Programming:</strong> Python, C++, JavaScript</li>
-      <li><i class="fa-solid fa-server"></i> <strong>Platforms:</strong> Active Directory, Linux, Windows Server</li>
-      <li><i class="fa-solid fa-certificate"></i> <strong>Certifications:</strong> CEH, Security+, CCNA, Google Cybersecurity, Linux</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Contact</h2>
-    <p>
-      📧 <a href="mailto:Mohibullah.Barak3@gmail.com">Mohibullah.Barak3@gmail.com</a><br>
-      🔗 <a href="https://www.linkedin.com/in/mohibullah-barakzai-b1a651217/" target="_blank">LinkedIn</a><br>
-      🐙 <a href="https://github.com/Mohibullah-Barakzai" target="_blank">GitHub</a>
-    </p>
-  </section>
-
-  <section>
-    <h2>📄 Professional Summary</h2>
-    <p><strong>Mohibullah Barakzai</strong><br>
-    Penetration Tester | Security Researcher</p>
-
-    <ul>
-      <li>Certified in CEH, CompTIA Security+, CCNA, Google Cybersecurity, and Linux</li>
-      <li>Strong foundation in networking, Linux, and cybersecurity with hands‑on penetration testing experience</li>
-      <li>Skilled in C++ and JavaScript for exploit development, automation, and web security testing</li>
-      <li>Currently pursuing advanced Offensive Security certifications: OSCP → OSEP → OSWE/OSED → OSCE3 → OSEE</li>
-      <li>Passionate about red teaming, exploit development, and simulating nation‑state adversaries</li>
-    </ul>
-
-    <p>📌 For full details, connect with me on
-      <a href="https://www.linkedin.com/in/mohibullah-barakzai-b1a651217/" target="_blank
+  </footer>
+</body>
+</html>
