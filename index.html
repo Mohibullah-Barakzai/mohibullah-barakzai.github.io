@@ -4,37 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mohibullah Barakzai | Portfolio</title>
+  <!-- Modern Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
       background: #0d1117;
       color: #e6edf3;
-      line-height: 1.6;
+      line-height: 1.7;
     }
     header {
       background: #161b22;
-      padding: 2rem;
+      padding: 3rem 1rem;
       text-align: center;
+      border-bottom: 2px solid #30363d;
     }
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
     header p {
       font-size: 1.2rem;
-      color: #8b949e;
+      color: #58a6ff;
+      font-weight: 500;
+      margin-top: 0.5rem;
     }
     section {
       padding: 2rem;
-      max-width: 800px;
-      margin: auto;
+      max-width: 900px;
+      margin: 3rem auto;
+      background: #161b22;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
     }
     h2 {
       border-bottom: 2px solid #30363d;
       padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      color: #58a6ff;
     }
     a {
       color: #58a6ff;
@@ -46,89 +55,110 @@
     .button-link {
       background: #58a6ff;
       color: #fff;
-      padding: 8px 12px;
-      border-radius: 4px;
+      padding: 10px 16px;
+      border-radius: 6px;
       text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    .button-link:hover {
+      background: #1f6feb;
+    }
+    .project-card {
+      background: #0d1117;
+      padding: 1.5rem;
+      border-radius: 6px;
+      margin-bottom: 1.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: 1px solid #30363d;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    ul li {
+      margin-bottom: 0.6rem;
     }
   </style>
 </head>
 <body>
 
   <header>
-  <h1>👨💻 Mohibullah Barakzai</h1>
-  <p>Penetration Tester | Security Researcher</p>
-</header>
-
-<section>
-  <h2>About Me</h2>
-  <p>
-    Penetration Tester and Security Researcher with a strong foundation in networking, Linux, and
-    cybersecurity. Certified in <strong>CEH, CompTIA Security+, CCNA, Google Cybersecurity, and Linux</strong>.
-    Skilled in <strong>C++ and JavaScript</strong> for exploit development, automation, and web security testing.
-  </p>
-  <p>
-    I am committed to advancing my expertise through the <strong>Offensive Security certification track</strong>,
-    with a clear roadmap: <em>OSCP → OSEP → OSWE/OSED → OSCE3 → OSEE</em>. This progression reflects my
-    dedication to mastering penetration testing, exploit development, and advanced red team operations.
-  </p>
-  <p>
-    Passionate about <strong>red teaming, exploit development, and simulating nation‑state adversaries</strong>,
-    I focus on building both offensive and defensive skills to operate effectively in complex enterprise environments.
-  </p>
-</section>
-
+    <h1>👨💻 Mohibullah Barakzai</h1>
+    <p>Penetration Tester | Security Researcher</p>
+  </header>
 
   <section>
-  <h2>Projects</h2>
-
-  <div class="project-card">
-    <h3>🔍 ShadoOps Lab</h3>
-    <p>Hands‑on penetration testing and red team lab environment focused on adversary emulation and Active Directory exploitation.</p>
-  </div>
-
-  <div class="project-card">
-    <h3>🍏 Apple Bug Bounty</h3>
-    <p>Reported a vulnerability in Apple’s ImageIO framework as part of the Apple Security Bounty program.</p>
-  </div>
-
-  <div class="project-card">
-    <h3>🛡️ Active Directory Attack & Defense Lab</h3>
-    <p>Currently building and testing advanced AD attack chains and defense strategies to simulate enterprise‑level adversaries.</p>
-  </div>
-
-  <div class="project-card">
-    <h3>🌐 Portfolio Site</h3>
-    <p>This live site, built with GitHub Pages, showcasing my certifications, projects, and career roadmap.</p>
-  </div>
-</section>
-
+    <h2>About Me</h2>
+    <p>
+      Penetration Tester and Security Researcher with a strong foundation in networking, Linux, and
+      cybersecurity. Certified in <strong>CEH, CompTIA Security+, CCNA, Google Cybersecurity, and Linux</strong>.
+      Skilled in <strong>C++ and JavaScript</strong> for exploit development, automation, and web security testing.
+    </p>
+    <p>
+      I am committed to advancing my expertise through the <strong>Offensive Security certification track</strong>,
+      with a clear roadmap: <em>OSCP → OSEP → OSWE/OSED → OSCE3 → OSEE</em>. This progression reflects my
+      dedication to mastering penetration testing, exploit development, and advanced red team operations.
+    </p>
+    <p>
+      Passionate about <strong>red teaming, exploit development, and simulating nation‑state adversaries</strong>,
+      I focus on building both offensive and defensive skills to operate effectively in complex enterprise environments.
+    </p>
+  </section>
 
   <section>
-  <h2>Contact</h2>
-  <p>
-    📧 <a href="mailto:Mohibullah.Barak3@gmail.com">Mohibullah.Barak3@gmail.com</a><br>
-    🔗 <a href="https://www.linkedin.com/in/mohibullah-barakzai-b1a651217/" target="_blank">LinkedIn</a><br>
-    🐙 <a href="https://github.com/Mohibullah-Barakzai" target="_blank">GitHub</a>
-  </p>
-</section>
+    <h2>Projects</h2>
 
-<section>
-  <h2>📄 Professional Summary</h2>
-  <p><strong>Mohibullah Barakzai</strong><br>
-  Penetration Tester | Security Researcher</p>
+    <div class="project-card">
+      <h3>🔍 ShadoOps Lab</h3>
+      <p>Hands‑on penetration testing and red team lab environment focused on adversary emulation and Active Directory exploitation.</p>
+    </div>
 
-  <ul>
-    <li>Certified in CEH, CompTIA Security+, CCNA, Google Cybersecurity, and Linux</li>
-    <li>Strong foundation in networking, Linux, and cybersecurity with hands‑on penetration testing experience</li>
-    <li>Skilled in C++ and JavaScript for exploit development, automation, and web security testing</li>
-    <li>Currently pursuing advanced Offensive Security certifications: OSCP → OSEP → OSWE/OSED → OSCE3 → OSEE</li>
-    <li>Passionate about red teaming, exploit development, and simulating nation‑state adversaries</li>
-  </ul>
+    <div class="project-card">
+      <h3>🍏 Apple Bug Bounty</h3>
+      <p>Reported a vulnerability in Apple’s ImageIO framework as part of the Apple Security Bounty program.</p>
+    </div>
 
-  <p>📌 For full details, connect with me on
-    <a href="https://www.linkedin.com/in/mohibullah-barakzai-b1a651217/" target="_blank">LinkedIn</a>.
-  </p>
-</section>
+    <div class="project-card">
+      <h3>🛡️ Active Directory Attack & Defense Lab</h3>
+      <p>Currently building and testing advanced AD attack chains and defense strategies to simulate enterprise‑level adversaries.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>🌐 Portfolio Site</h3>
+      <p>This live site, built with GitHub Pages, showcasing my certifications, projects, and career roadmap.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>
+      📧 <a href="mailto:Mohibullah.Barak3@gmail.com">Mohibullah.Barak3@gmail.com</a><br>
+      🔗 <a href="https://www.linkedin.com/in/mohibullah-barakzai-b1a651217/" target="_blank">LinkedIn</a><br>
+      🐙 <a href="https://github.com/Mohibullah-Barakzai" target="_blank">GitHub</a>
+    </p>
+  </section>
+
+  <section>
+    <h2>📄 Professional Summary</h2>
+    <p><strong>Mohibullah Barakzai</strong><br>
+    Penetration Tester | Security Researcher</p>
+
+    <ul>
+      <li>Certified in CEH, CompTIA Security+, CCNA, Google Cybersecurity, and Linux</li>
+      <li>Strong foundation in networking, Linux, and cybersecurity with hands‑on penetration testing experience</li>
+      <li>Skilled in C++ and JavaScript for exploit development, automation, and web security testing</li>
+      <li>Currently pursuing advanced Offensive Security certifications: OSCP → OSEP → OSWE/OSED → OSCE3 → OSEE</li>
+      <li>Passionate about red teaming, exploit development, and simulating nation‑state adversaries</li>
+    </ul>
+
+    <p>📌 For full details, connect with me on
+      <a href="https://www.linkedin.com/in/mohibullah-barakzai-b1a651217/" target="_blank">LinkedIn</a>.
+    </p>
+  </section>
 
   <section style="text-align:center; padding-bottom:2rem;">
     <p>
