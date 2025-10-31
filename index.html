@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mohibullah Barakzai | Portfolio</title>
+  <meta name="description" content="Portfolio of Mohibullah Barakzai — Penetration Tester and Security Researcher specializing in offensive security, exploit development, and red teaming.">
+  <meta name="keywords" content="Penetration Tester, Security Researcher, Cybersecurity, Red Team, Exploit Development, OSCP, OSEP, OSWE, OSEE">
+  <meta name="author" content="Mohibullah Barakzai">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- Modern Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <!-- Font Awesome for icons -->
@@ -89,6 +93,27 @@
       color: #58a6ff;
       margin-right: 8px;
     }
+    /* Skills grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .skills-grid li {
+      background: #0d1117;
+      padding: 1rem;
+      border-radius: 6px;
+      border: 1px solid #30363d;
+    }
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -138,7 +163,7 @@
 
   <section>
     <h2>Skills</h2>
-    <ul>
+    <ul class="skills-grid">
       <li><i class="fa-solid fa-shield-halved"></i> <strong>Pentesting Tools:</strong> Kali Linux, Burp Suite, Metasploit, BloodHound</li>
       <li><i class="fa-solid fa-code"></i> <strong>Programming:</strong> Python, C++, JavaScript</li>
       <li><i class="fa-solid fa-server"></i> <strong>Platforms:</strong> Active Directory, Linux, Windows Server</li>
@@ -169,15 +194,4 @@
     </ul>
 
     <p>📌 For full details, connect with me on
-      <a href="https://www.linkedin.com/in/mohibullah-barakzai-b1a651217/" target="_blank">LinkedIn</a>.
-    </p>
-  </section>
-
-  <section style="text-align:center; padding-bottom:2rem;">
-    <p>
-      📄 <a href="resume.pdf" target="_blank" class="button-link">Download CV</a>
-    </p>
-  </section>
-
-</body>
-</html>
+      <a href="https://www.linkedin.com/in/mohibullah-barakzai-b1a651217/" target="_blank
