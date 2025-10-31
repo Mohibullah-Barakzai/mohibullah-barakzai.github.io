@@ -2,65 +2,149 @@
 <html lang="en">
 <head>
   <!-- Meta -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mohibullah Barakzai | Portfolio</title>
-  <meta name="description" content="Penetration Tester and Security Researcher with hands-on experience in exploit development, red teaming, and adversarial simulation.">
-  <meta name="author" content="Mohibullah Barakzai">
+  <meta name="description" content="Penetration Tester and Security Researcher with hands-on experience in exploit development, red teaming, and adversary emulation." />
+  <meta name="author" content="Mohibullah Barakzai" />
 
   <!-- Favicons -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="icon" href="favicon-32.ico" sizes="32x32" type="image/x-icon">
-  <link rel="icon" href="favicon-16.ico" sizes="16x16" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="favicon-32.ico" sizes="32x32" type="image/x-icon" />
+  <link rel="icon" href="favicon-16.ico" sizes="16x16" type="image/x-icon" />
 
   <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <!-- Styles -->
   <style>
     :root {
-      --bg:#0d1117; --card:#161b22; --text:#e6edf3; --muted:#8b949e;
-      --accent:#2f81f7; --border:#30363d; --shadow:rgba(0,0,0,0.4);
-      --maxw:1000px;
+      --bg: #0d1117;
+      --card: #161b22;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #2f81f7;
+      --border: #30363d;
+      --shadow: rgba(0,0,0,0.4);
+      --maxw: 1000px;
     }
-    * { box-sizing:border-box; }
-    body { margin:0; font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
-    a { color:var(--accent); text-decoration:none; }
-    a:hover { text-decoration:underline; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-    header { background:#0d1117; border-bottom:1px solid var(--border); position:sticky; top:0; z-index:10; }
-    .container { max-width:var(--maxw); margin:0 auto; padding:0 20px; }
-    .header-inner { display:flex; justify-content:space-between; align-items:center; padding:16px 0; }
-    .brand { display:flex; align-items:center; gap:10px; }
-    .brand-logo { width:56px; height:56px; border-radius:6px; background:url('favicon-32.ico') no-repeat center/cover; border:1px solid var(--border); }
-    .brand h1 { margin:0; font-size:1.8rem; font-weight:700; }
-    nav a { margin-left:18px; font-weight:600; color:var(--muted); }
-    nav a:hover, nav a.active { color:var(--text); }
+    /* Header */
+    header {
+      background: #0d1117;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 6px;
+      background: url('favicon-32.ico') no-repeat center/cover;
+      border: 1px solid var(--border);
+    }
+    .brand h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+    nav a { margin-left: 18px; font-weight: 600; color: var(--muted); }
+    nav a:hover, nav a.active { color: var(--text); }
+    .social {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .social a { color: var(--muted); }
+    .social a:hover { color: var(--text); }
 
-    .hero { padding:60px 0 40px; border-bottom:1px solid var(--border); }
-    .hero h2 { font-size:2.2rem; margin:0 0 10px; font-weight:700; }
-    .hero p { margin:0; color:var(--muted); max-width:750px; font-size:1rem; }
+    /* Hero */
+    .hero {
+      padding: 60px 0 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero h2 { font-size: 2.2rem; margin: 0 0 10px; font-weight: 700; }
+    .hero p { margin: 0; color: var(--muted); max-width: 750px; font-size: 1rem; }
 
-    section { padding:60px 0; }
-    .card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:28px; box-shadow:0 4px 16px var(--shadow); }
-    .grid { display:grid; gap:24px; }
-    @media (min-width:860px) { .grid.cols-2 { grid-template-columns:1fr 1fr; } }
+    /* Layout */
+    section { padding: 60px 0; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px;
+      box-shadow: 0 4px 16px var(--shadow);
+    }
+    .grid { display: grid; gap: 24px; }
+    @media (min-width: 860px) {
+      .grid.cols-2 { grid-template-columns: 1fr 1fr; }
+    }
 
-    h3 { margin:0 0 14px; font-size:1.5rem; font-weight:700; border-bottom:2px solid var(--border); padding-bottom:6px; display:inline-flex; align-items:center; gap:10px; }
-    h4 { margin:0 0 10px; font-size:1.2rem; font-weight:600; color:#d0d7de; }
-    .muted { color:var(--muted); }
-    ul { list-style:none; padding:0; margin:0; }
-    li + li { margin-top:8px; }
-    .tag { display:inline-block; padding:4px 10px; border:1px solid var(--border); border-radius:999px; background:#0e131a; color:var(--muted); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.06em; font-weight:600; }
+    /* Headings */
+    h3 {
+      margin: 0 0 14px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 6px;
+      display: inline-flex; align-items: center; gap: 10px;
+    }
+    h4 { margin: 0 0 10px; font-size: 1.2rem; font-weight: 600; color: #d0d7de; }
+    .muted { color: var(--muted); }
 
-    /* Colorful icons (controlled palette) */
-    .fa-user{color:#f39c12;} .fa-flask{color:#2ecc71;} .fa-code{color:#3498db;}
-    .fa-briefcase{color:#9b59b6;} .fa-envelope{color:#e74c3c;}
-    .fa-microscope{color:#1abc9c;} .fa-apple{color:#ffffff;} .fa-network-wired{color:#e67e22;}
-    .fa-award{color:#f1c40f;} .fa-graduation-cap{color:#2ecc71;} .fa-sitemap{color:#e84393;} .fa-terminal{color:#00cec9;}
+    /* Lists */
+    ul { list-style: none; padding: 0; margin: 0; }
+    li + li { margin-top: 8px; }
 
-    footer { border-top:1px solid var(--border); padding:20px 0; text-align:center; color:var(--muted); }
+    /* Tags - Title Case for consistency */
+    .tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .tag {
+      display: inline-block;
+      padding: 4px 10px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: #0e131a;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.03em;
+      font-weight: 600;
+    }
+
+    /* Icon colors (controlled palette) */
+    .fa-user { color: #f39c12; }
+    .fa-flask { color: #2ecc71; }
+    .fa-code { color: #3498db; }
+    .fa-briefcase { color: #9b59b6; }
+    .fa-envelope { color: #e74c3c; }
+    .fa-microscope { color: #1abc9c; }
+    .fa-apple { color: #ffffff; }
+    .fa-network-wired { color: #e67e22; }
+    .fa-award { color: #f1c40f; }
+    .fa-graduation-cap { color: #2ecc71; }
+    .fa-sitemap { color: #e84393; }
+    .fa-terminal { color: #00cec9; }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--border); padding: 20px 0; text-align: center; color: var(--muted); }
   </style>
 </head>
 <body>
@@ -78,6 +162,12 @@
         <a href="#summary"><i class="fa-solid fa-briefcase"></i> Summary</a>
         <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
       </nav>
+      <div class="social">
+        <!-- Optional social icons (replace # with your links) -->
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/mohibullah-barakzai" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
     </div>
   </header>
 
@@ -86,8 +176,8 @@
     <div class="container">
       <h2><i class="fa-solid fa-shield-halved"></i> Penetration Tester & Security Researcher</h2>
       <p>
-        Penetration Tester and Security Researcher with hands‑on experience in exploit development, red teaming, and adversarial simulation.
-        Focused on uncovering complex attack paths and enabling resilient defenses through research‑driven engineering.
+        Hands-on experience in exploit development, red teaming, and adversary emulation.
+        Focused on uncovering complex attack paths and enabling resilient defenses in enterprise environments.
       </p>
     </div>
   </section>
@@ -100,14 +190,14 @@
         <h3><i class="fa-solid fa-user"></i> About me</h3>
         <p>
           Penetration Tester and Security Researcher with a strong foundation in networking, Linux, and cybersecurity.
-          Certified in <strong>CompTIA Security+, CEH, Google Cybersecurity, CCNA, Linux, Cybersecurity Hacker Exposed, and Introduction to Packet Tracer</strong>.
-          Skilled in <strong>C++ and JavaScript</strong> for exploit development, automation, and web security testing.
+          Certified in <strong>CompTIA Security+</strong>, <strong>CEH</strong>, <strong>Google Cybersecurity Certificate</strong>, <strong>CCNA</strong>, <strong>CompTIA Linux+</strong>, and training including <strong>Cybersecurity Hacker Exposed</strong>. Proficient with <strong>Packet Tracer</strong>.
         </p>
         <p>
-          Advancing through the <strong>Offensive Security certification track</strong>: <em>OSCP → OSEP → OSWE/OSED → OSCE3 → OSEE</em>.
+          Skilled in <strong>C++</strong> (exploit prototypes, tooling) and <strong>JavaScript</strong> (web security testing, automation).
+          Currently pursuing the <strong>Offensive Security track</strong>: <em>OSCP → OSEP → OSWE/OSED → OSCE3 → OSEE</em>.
         </p>
         <p>
-          Passionate about <strong>red teaming, exploit development, and simulating nation‑state adversaries</strong>.
+          Passionate about <strong>red teaming</strong>, <strong>exploit development</strong>, and <strong>adversary emulation</strong> aligned to real-world threat models.
         </p>
       </div>
     </section>
@@ -118,24 +208,36 @@
       <div class="grid cols-2">
         <div class="card">
           <h4><i class="fa-solid fa-microscope"></i> ShadowOps‑Lab</h4>
-          <p class="muted">Executive‑level red team lab demonstrating reproducible, audit‑grade security systems with applications across enterprise and healthcare domains.</p>
-          <ul>
-            <li><span class="tag">Exploit Dev</span> <span class="tag">Adversary Simulation</span></li>
-          </ul>
+          <p class="muted">
+            Executive-level red team lab demonstrating reproducible, audit-grade security workflows across enterprise and healthcare contexts.
+            Emphasis on initial access, privilege escalation, lateral movement, and detection validation.
+          </p>
+          <div class="tags">
+            <span class="tag">Exploit Development</span>
+            <span class="tag">Adversary Emulation</span>
+          </div>
         </div>
         <div class="card">
-          <h4><i class="fa-brands fa-apple"></i> Apple Bug Bounty</h4>
-          <p class="muted">Reported and validated vulnerability in Apple’s ImageIO framework as part of the Apple Security Bounty program.</p>
-          <ul>
-            <li><span class="tag">AppSec</span> <span class="tag">Bug Bounty</span></li>
-          </ul>
+          <h4><i class="fa-brands fa-apple"></i> Apple Security Bounty</h4>
+          <p class="muted">
+            Reported and validated vulnerability in Apple’s ImageIO framework as part of the Apple Security Bounty program.
+            Focus on responsible disclosure and reproducible proof-of-concept.
+          </p>
+          <div class="tags">
+            <span class="tag">Application Security</span>
+            <span class="tag">Bug Bounty</span>
+          </div>
         </div>
         <div class="card">
           <h4><i class="fa-solid fa-network-wired"></i> Active Directory Attack & Defense Lab</h4>
-          <p class="muted">Advanced lab environment for building and testing AD attack chains and defense strategies to simulate enterprise‑level adversaries.</p>
-          <ul>
-            <li><span class="tag">Red/Blue</span> <span class="tag">Detection</span></li>
-          </ul>
+          <p class="muted">
+            Advanced lab for building and testing AD attack chains and defense strategies.
+            Techniques include BloodHound attack pathing, credential abuse, and Sigma-style detections.
+          </p>
+          <div class="tags">
+            <span class="tag">Red/Blue</span>
+            <span class="tag">Detection</span>
+          </div>
         </div>
       </div>
     </section>
@@ -149,8 +251,8 @@
           <ul>
             <li><strong>Programming:</strong> Python, Bash, PowerShell, C++, JavaScript</li>
             <li><strong>Operating systems:</strong> Windows, Linux, ParrotOS, Ubuntu, macOS</li>
-            <li><strong>Tools:</strong> Wireshark, Burp Suite, Nmap, Metasploit, BloodHound, CrackMapExec, Responder, Mimikatz</li>
-            <li><strong>Focus areas:</strong> Web App Security, Reverse Engineering, Malware Analysis, Exploit Development, Active Directory, Red Team</li>
+            <li><strong>Tools:</strong> Wireshark, Burp Suite, Nmap, Metasploit, BloodHound, CrackMapExec, Responder, Mimikatz, John the Ripper, Nessus</li>
+            <li><strong>Focus areas:</strong> Web App Security, Exploit Development, Reverse Engineering, Malware Analysis, Active Directory, Red/Blue Teaming</li>
           </ul>
         </div>
         <div class="card">
@@ -158,29 +260,28 @@
           <ul>
             <li>CompTIA Security+</li>
             <li>CEH</li>
-            <li>Google Cybersecurity</li>
+            <li>Google Cybersecurity Certificate</li>
             <li>CCNA</li>
-            <li>Linux</li>
-            <li>Cybersecurity Hacker Exposed</li>
-            <li>Introduction to Packet Tracer</li>
+            <li>CompTIA Linux+</li>
+            <li>Cybersecurity Hacker Exposed (training)</li>
           </ul>
         </div>
       </div>
-      <div class="grid cols-2" style="margin-top:24px;">
+      <div class="grid cols-2" style="margin-top: 24px;">
         <div class="card">
           <h4><i class="fa-solid fa-graduation-cap"></i> Platforms & labs</h4>
           <ul>
             <li><strong>Learning platforms:</strong> TryHackMe, Hack The Box, PentesterLab</li>
-            <li><strong>Crowdsourced bug bounty:</strong> HackerOne, Bugcrowd</li>
+            <li><strong>Bug bounty:</strong> HackerOne, Bugcrowd (Experienced Hacker credential)</li>
             <li><strong>Competitions:</strong> EC‑Council CTF</li>
-            <li><strong>Practice labs:</strong> Custom AD attack/defense lab, exploit dev sandbox</li>
+            <li><strong>Practice labs:</strong> Custom AD attack/defense lab, exploit development sandbox</li>
           </ul>
         </div>
         <div class="card">
           <h4><i class="fa-solid fa-sitemap"></i> Methodology</h4>
           <ul>
             <li><strong>Approach:</strong> Scoped recon → exploit development → impact validation → actionable reporting</li>
-            <li><strong>Defensive mapping:</strong> Attack paths (BloodHound), detections (Sigma‑style), mitigations</li>
+            <li><strong>Defensive mapping:</strong> Attack paths (BloodHound), detections (Sigma rules), mitigations</li>
           </ul>
         </div>
       </div>
@@ -190,10 +291,10 @@
     <section id="summary">
       <h3><i class="fa-solid fa-briefcase"></i> Professional summary</h3>
       <div class="card">
-        <p><strong>Mohibullah Barakzai</strong><br>Penetration Tester | Security Researcher</p>
+        <p><strong>Mohibullah Barakzai</strong><br />Penetration Tester | Security Researcher</p>
         <ul>
-          <li><strong>Certifications:</strong> Security+, CEH, Google Cybersecurity, CCNA, Linux, Cybersecurity Hacker Exposed, Introduction to Packet Tracer</li>
-          <li><strong>Core strengths:</strong> Networking, Linux, exploit development, adversary simulation, red teaming</li>
+          <li><strong>Certifications:</strong> CompTIA Security+, CEH, Google Cybersecurity Certificate, CCNA, CompTIA Linux+, Cybersecurity Hacker Exposed (training)</li>
+          <li><strong>Core strengths:</strong> Networking, Linux, exploit development, adversary emulation, red teaming</li>
           <li><strong>Languages:</strong> C++, JavaScript (automation, exploit tooling, web security testing)</li>
           <li><strong>Roadmap:</strong> OSCP → OSEP → OSWE/OSED → OSCE3 → OSEE</li>
           <li><strong>Focus:</strong> Translating offensive findings into measurable defensive improvements</li>
@@ -206,8 +307,8 @@
       <h3><i class="fa-solid fa-envelope"></i> Contact</h3>
       <div class="card">
         <p>Connect with me on <a href="https://www.linkedin.com/in/mohibullah-barakzai" target="_blank" rel="noopener">LinkedIn</a>.</p>
-        <!-- Optional:
-        <p><a href="https://github.com/Mohibullah-Barakzai" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a></p>
+        <!-- Optional links:
+        <p><a href="https://github.com/your-handle" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a></p>
         <p><a href="mailto:you@example.com"><i class="fa-solid fa-paper-plane"></i> Email</a></p>
         -->
       </div>
