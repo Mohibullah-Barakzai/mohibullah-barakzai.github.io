@@ -7,7 +7,7 @@
   <meta name="description" content="Penetration Tester & Security Researcher focused on exploit development, adversary emulation, and resilient defenses." />
   <meta name="author" content="Mohibullah Barakzai" />
 
-  <!-- Favicons (place these files next to index.html) -->
+  <!-- Favicons (ensure these files exist next to index.html) -->
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png" />
   <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png" />
@@ -16,29 +16,57 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
+  <!-- Styles -->
   <style>
-    :root{--bg:#0d1117;--card:#161b22;--text:#e6edf3;--muted:#8b949e;--accent:#2f81f7;--border:#30363d;--shadow:rgba(0,0,0,0.4);--maxw:1000px;}
-    *{box-sizing:border-box} body{margin:0;font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
-    header{background:#0d1117;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10}
-    .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
-    .header-inner{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
-    .brand h1{margin:0;font-size:1.8rem;font-weight:700}
-    nav a{margin-left:16px;font-weight:600;color:var(--muted)} nav a:hover,nav a.active{color:var(--text)}
-    .social{display:flex;gap:12px} .social a{color:var(--muted)} .social a:hover{color:var(--text)}
-    .hero{padding:32px 0 24px;border-bottom:1px solid var(--border)}
-    .hero h2{font-size:2.1rem;margin:0 0 8px;font-weight:700} .hero p{margin:0;color:var(--muted);max-width:760px}
-    section{padding:32px 0} .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:22px;box-shadow:0 4px 16px var(--shadow)}
-    .grid{display:grid;gap:20px} @media(min-width:860px){.grid.cols-2{grid-template-columns:1fr 1fr}}
-    h3{margin:0 0 12px;font-size:1.4rem;font-weight:700;border-bottom:2px solid var(--border);padding-bottom:6px;display:flex;align-items:center;gap:10px}
-    h4{margin:0 0 8px;font-size:1.1rem;font-weight:600;color:#d0d7de} .muted{color:var(--muted)}
-    ul{list-style:none;padding:0;margin:0} li+li{margin-top:6px}
-    .tags{display:flex;gap:8px;flex-wrap:wrap} .tag{padding:4px 10px;border:1px solid var(--border);border-radius:999px;background:#0e131a;color:var(--muted);font-size:.75rem;font-weight:600}
-    .fa-user{color:#f39c12}.fa-flask{color:#2ecc71}.fa-code{color:#3498db}.fa-briefcase{color:#9b59b6}.fa-envelope{color:#e74c3c}
-    footer{border-top:1px solid var(--border);padding:16px 0;text-align:center;color:var(--muted)}
+    :root{
+      --bg:#0d1117; --card:#161b22; --text:#e6edf3; --muted:#8b949e;
+      --accent:#2f81f7; --border:#30363d; --shadow:rgba(0,0,0,0.4);
+      --maxw:1000px;
+    }
+    *{box-sizing:border-box;}
+    body{margin:0; font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.6;}
+    a{color:var(--accent); text-decoration:none;} a:hover{text-decoration:underline;}
+
+    /* Header */
+    header{background:#0d1117; border-bottom:1px solid var(--border); position:sticky; top:0; z-index:10;}
+    .container{max-width:var(--maxw); margin:0 auto; padding:0 20px;}
+    .header-inner{display:flex; justify-content:space-between; align-items:center; padding:16px 0;}
+    .brand h1{margin:0; font-size:1.8rem; font-weight:700;}
+    nav a{margin-left:16px; font-weight:600; color:var(--muted);}
+    nav a:hover, nav a.active{color:var(--text);}
+
+    /* Hero */
+    .hero{padding:32px 0 24px; border-bottom:1px solid var(--border);}
+    .hero h2{font-size:2.1rem; margin:0 0 8px; font-weight:700;}
+    .hero p{margin:0; color:var(--muted); max-width:760px;}
+
+    /* Sections & cards */
+    section{padding:32px 0;}
+    .card{background:var(--card); border:1px solid var(--border); border-radius:10px; padding:22px; box-shadow:0 4px 16px var(--shadow);}
+    .grid{display:grid; gap:20px;}
+    @media(min-width:860px){ .grid.cols-2{grid-template-columns:1fr 1fr;} }
+
+    /* Headings */
+    h3{margin:0 0 12px; font-size:1.4rem; font-weight:700; border-bottom:2px solid var(--border); padding-bottom:6px; display:flex; align-items:center; gap:10px;}
+    h4{margin:0 0 8px; font-size:1.1rem; font-weight:600; color:#d0d7de;}
+    .muted{color:var(--muted);}
+
+    /* Lists & tags */
+    ul{list-style:none; padding:0; margin:0;}
+    li+li{margin-top:6px;}
+    .tags{display:flex; gap:8px; flex-wrap:wrap;}
+    .tag{padding:4px 10px; border:1px solid var(--border); border-radius:999px; background:#0e131a; color:var(--muted); font-size:.75rem; font-weight:600;}
+
+    /* Icon accent colors */
+    .fa-user{color:#f39c12;} .fa-flask{color:#2ecc71;} .fa-code{color:#3498db;}
+    .fa-briefcase{color:#9b59b6;} .fa-envelope{color:#e74c3c;}
+
+    /* Footer */
+    footer{border-top:1px solid var(--border); padding:16px 0; text-align:center; color:var(--muted);}
   </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
     <div class="container header-inner">
       <div class="brand"><h1>Mohibullah Barakzai</h1></div>
@@ -49,14 +77,10 @@
         <a href="#summary"><i class="fa-solid fa-briefcase"></i> Summary</a>
         <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
       </nav>
-      <div class="social">
-        <a href="https://github.com/" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/mohibullah-barakzai-b1a651217/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-      </div>
     </div>
   </header>
 
+  <!-- Hero -->
   <section class="hero">
     <div class="container">
       <h2>Penetration Tester & Security Researcher</h2>
@@ -64,7 +88,9 @@
     </div>
   </section>
 
+  <!-- Main -->
   <main class="container">
+    <!-- About -->
     <section id="about">
       <div class="card">
         <h3><i class="fa-solid fa-user"></i> About me</h3>
@@ -74,27 +100,38 @@
       </div>
     </section>
 
+    <!-- Projects -->
     <section id="projects">
       <h3><i class="fa-solid fa-flask"></i> Projects</h3>
       <div class="grid cols-2">
         <div class="card">
           <h4>ShadowOps Lab</h4>
           <p class="muted">Red team lab demonstrating reproducible, audit-grade workflows across enterprise and healthcare contexts. Emphasis on initial access, escalation, lateral movement, and detection validation.</p>
-          <div class="tags"><span class="tag">Exploit Development</span><span class="tag">Adversary Emulation</span></div>
+          <div class="tags">
+            <span class="tag">Exploit Development</span>
+            <span class="tag">Adversary Emulation</span>
+          </div>
         </div>
         <div class="card">
           <h4>Apple Security Bounty</h4>
           <p class="muted">Reported and validated an ImageIO framework vulnerability as part of Apple’s Security Bounty; responsible disclosure with reproducible proof-of-concept.</p>
-          <div class="tags"><span class="tag">Application Security</span><span class="tag">Bug Bounty</span></div>
+          <div class="tags">
+            <span class="tag">Application Security</span>
+            <span class="tag">Bug Bounty</span>
+          </div>
         </div>
         <div class="card">
           <h4>Active Directory Attack & Defense Lab</h4>
           <p class="muted">Advanced AD attack chains and defense strategies using BloodHound pathing, credential abuse, and Sigma-style detections.</p>
-          <div class="tags"><span class="tag">Red/Blue</span><span class="tag">Detection</span></div>
+          <div class="tags">
+            <span class="tag">Red/Blue</span>
+            <span class="tag">Detection</span>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Skills -->
     <section id="skills">
       <h3><i class="fa-solid fa-code"></i> Skills</h3>
       <div class="grid cols-2">
@@ -139,6 +176,7 @@
       </div>
     </section>
 
+    <!-- Summary -->
     <section id="summary">
       <h3><i class="fa-solid fa-briefcase"></i> Professional summary</h3>
       <div class="card">
@@ -153,6 +191,7 @@
       </div>
     </section>
 
+    <!-- Contact -->
     <section id="contact">
       <h3><i class="fa-solid fa-envelope"></i> Contact</h3>
       <div class="card">
@@ -161,6 +200,7 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="container">
       <p>&copy; 2025 Mohibullah Barakzai</p>
