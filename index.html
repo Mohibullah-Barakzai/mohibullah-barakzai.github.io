@@ -16,7 +16,6 @@
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-</head>
 
   <!-- Styles -->
   <style>
@@ -33,7 +32,8 @@
     header{background:#0d1117; border-bottom:1px solid var(--border); position:sticky; top:0; z-index:10;}
     .container{max-width:var(--maxw); margin:0 auto; padding:0 20px;}
     .header-inner{display:flex; justify-content:space-between; align-items:center; padding:16px 0;}
-    .brand h1{margin:0; font-size:1.8rem; font-weight:700;}
+    .brand h1{margin:0; font-size:1.8rem; font-weight:700; display:flex; align-items:center; gap:8px;}
+    .brand h1 img{height:28px; width:28px;}
     nav a{margin-left:16px; font-weight:600; color:var(--muted);}
     nav a:hover, nav a.active{color:var(--text);}
 
@@ -68,13 +68,12 @@
   </style>
 </head>
 <body>
-    <!-- Header -->
+  <!-- Header -->
   <header>
     <div class="container header-inner">
       <div class="brand">
         <h1>
-          <img src="favicon-48.png" alt="Logo"
-               style="height:28px; width:28px; vertical-align:middle; margin-right:8px;">
+          <img src="favicon-48.png" alt="Logo">
           Mohibullah Barakzai
         </h1>
       </div>
@@ -87,6 +86,8 @@
       </nav>
     </div>
   </header>
+</body>
+</html>
 
   <!-- Hero -->
   <section class="hero">
