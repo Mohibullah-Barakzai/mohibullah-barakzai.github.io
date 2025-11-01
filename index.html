@@ -32,8 +32,8 @@
     header{background:#0d1117; border-bottom:1px solid var(--border); position:sticky; top:0; z-index:10;}
     .container{max-width:var(--maxw); margin:0 auto; padding:0 20px;}
     .header-inner{display:flex; justify-content:space-between; align-items:center; padding:16px 0;}
-    .brand h1{margin:0; font-size:1.8rem; font-weight:700; display:flex; align-items:center; gap:8px;}
-    .brand h1 img{height:28px; width:28px;}
+    .brand h1{margin:0; font-size:1.8rem; font-weight:700; display:flex; align-items:center; gap:10px;}
+    .brand h1 .logo{height:48px; width:48px;}  /* 👈 Adjust size here */
     nav a{margin-left:16px; font-weight:600; color:var(--muted);}
     nav a:hover, nav a.active{color:var(--text);}
 
@@ -73,7 +73,7 @@
     <div class="container header-inner">
       <div class="brand">
         <h1>
-          <img src="favicon-48.png" alt="Logo">
+          <img src="source.png" alt="Logo" class="logo">
           Mohibullah Barakzai
         </h1>
       </div>
