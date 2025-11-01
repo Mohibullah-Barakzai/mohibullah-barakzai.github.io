@@ -19,52 +19,145 @@
 
   <!-- Styles -->
   <style>
-    :root{
+    :root {
       --bg:#0d1117; --card:#161b22; --text:#e6edf3; --muted:#8b949e;
       --accent:#2f81f7; --border:#30363d; --shadow:rgba(0,0,0,0.4);
       --maxw:1000px;
     }
-    *{box-sizing:border-box;}
-    body{margin:0; font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.6;}
-    a{color:var(--accent); text-decoration:none;} a:hover{text-decoration:underline;}
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body {
+      font-family:'Inter',sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
 
     /* Header */
-    header{background:#0d1117; border-bottom:1px solid var(--border); position:sticky; top:0; z-index:10;}
-    .container{max-width:var(--maxw); margin:0 auto; padding:0 20px;}
-    .header-inner{display:flex; justify-content:space-between; align-items:center; padding:16px 0;}
-    .brand h1{margin:0; font-size:1.8rem; font-weight:700; display:flex; align-items:center; gap:10px;}
-    .brand h1 .logo{height:48px; width:48px;}  /* 👈 Adjust size here */
-    nav a{margin-left:16px; font-weight:600; color:var(--muted);}
-    nav a:hover, nav a.active{color:var(--text);}
+    header {
+      background:#0d1117;
+      border-bottom:1px solid var(--border);
+      position:sticky; top:0; z-index:10;
+    }
+    .container {
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:0 20px;
+    }
+    .header-inner {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:16px 0;
+    }
+    .brand h1 {
+      margin:0;
+      font-size:1.8rem;
+      font-weight:700;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .brand h1 .logo {
+      height:48px;
+      width:48px;
+    }
+    nav a {
+      margin-left:16px;
+      font-weight:600;
+      color:var(--muted);
+    }
+    nav a:hover, nav a.active { color:var(--text); }
 
     /* Hero */
-    .hero{padding:32px 0 24px; border-bottom:1px solid var(--border);}
-    .hero h2{font-size:2.1rem; margin:0 0 8px; font-weight:700;}
-    .hero p{margin:0; color:var(--muted); max-width:760px;}
+    .hero {
+      padding:48px 0 32px;
+      border-bottom:1px solid var(--border);
+    }
+    .hero h2 {
+      font-size:2.2rem;
+      margin-bottom:12px;
+      font-weight:700;
+    }
+    .hero p {
+      color:var(--muted);
+      max-width:760px;
+      font-size:1rem;
+    }
 
     /* Sections & cards */
-    section{padding:32px 0;}
-    .card{background:var(--card); border:1px solid var(--border); border-radius:10px; padding:22px; box-shadow:0 4px 16px var(--shadow);}
-    .grid{display:grid; gap:20px;}
-    @media(min-width:860px){ .grid.cols-2{grid-template-columns:1fr 1fr;} }
+    section { padding:48px 0; }
+    .card {
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:24px;
+      box-shadow:0 4px 16px var(--shadow);
+    }
+    .grid { display:grid; gap:20px; }
+    @media(min-width:860px) {
+      .grid.cols-2 { grid-template-columns:1fr 1fr; }
+    }
 
     /* Headings */
-    h3{margin:0 0 12px; font-size:1.4rem; font-weight:700; border-bottom:2px solid var(--border); padding-bottom:6px; display:flex; align-items:center; gap:10px;}
-    h4{margin:0 0 8px; font-size:1.1rem; font-weight:600; color:#d0d7de;}
-    .muted{color:var(--muted);}
+    h3 {
+      margin-bottom:16px;
+      font-size:1.4rem;
+      font-weight:700;
+      border-bottom:2px solid var(--border);
+      padding-bottom:6px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    h4 {
+      margin-bottom:8px;
+      font-size:1.1rem;
+      font-weight:600;
+      color:#d0d7de;
+    }
+    .muted { color:var(--muted); }
 
     /* Lists & tags */
-    ul{list-style:none; padding:0; margin:0;}
-    li+li{margin-top:6px;}
-    .tags{display:flex; gap:8px; flex-wrap:wrap;}
-    .tag{padding:4px 10px; border:1px solid var(--border); border-radius:999px; background:#0e131a; color:var(--muted); font-size:.75rem; font-weight:600;}
+    ul { list-style:none; }
+    li+li { margin-top:6px; }
+    .tags {
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+    .tag {
+      padding:4px 10px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      background:#0e131a;
+      color:var(--muted);
+      font-size:.75rem;
+      font-weight:600;
+    }
 
     /* Icon accent colors */
     .fa-user{color:#f39c12;} .fa-flask{color:#2ecc71;} .fa-code{color:#3498db;}
     .fa-briefcase{color:#9b59b6;} .fa-envelope{color:#e74c3c;}
 
     /* Footer */
-    footer{border-top:1px solid var(--border); padding:16px 0; text-align:center; color:var(--muted);}
+    footer {
+      border-top:1px solid var(--border);
+      padding:20px 0;
+      text-align:center;
+      color:var(--muted);
+      font-size:0.9rem;
+    }
+
+    /* Responsive tweaks */
+    @media(max-width:600px) {
+      .brand h1 { font-size:1.4rem; }
+      .brand h1 .logo { height:36px; width:36px; }
+      nav a { margin-left:10px; font-size:0.9rem; }
+      .hero h2 { font-size:1.6rem; }
+      .hero p { font-size:0.9rem; }
+    }
   </style>
 </head>
 <body>
@@ -86,19 +179,15 @@
       </nav>
     </div>
   </header>
-</body>
-</html>
 
   <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <h2>Penetration Tester & Security Researcher</h2>
-      <p>
-        Practical experience in exploit development, reverse engineering, vulnerability research,
-        and adversary emulation — with a growing focus on uncovering complex attack paths and
-        building resilient defenses in enterprise environments.
-      </p>
-    </div>
+  <section class="hero container">
+    <h2>Penetration Tester & Security Researcher</h2>
+    <p>
+      Practical experience in exploit development, reverse engineering, vulnerability research,
+      and adversary emulation — with a growing focus on uncovering complex attack paths and
+      building resilient defenses in enterprise environments.
+    </p>
   </section>
 
   <!-- Main -->
