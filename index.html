@@ -164,13 +164,13 @@
   display: inline-block;
   background: var(--accent);
   color: #fff;
-  padding: 6px 14px;
+  padding: 6px 16px;
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 600;
   text-align: center;
-  margin-top: 10px;
-  transition: background 0.3s ease;
+  margin: 14px auto 0;   /* centers it with auto margins */
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .resume-badge i {
@@ -179,7 +179,16 @@
 
 .resume-badge:hover {
   background: #1f6feb;   /* slightly darker blue on hover */
-  cursor: default;       /* shows it’s not a link */
+  transform: scale(1.03); /* subtle lift effect */
+  cursor: default;        /* shows it’s not a link */
+}
+
+/* Responsive tweak: slightly smaller on mobile */
+@media(max-width:600px) {
+  .resume-badge {
+    font-size: 0.8rem;
+    padding: 5px 12px;
+  }
 }
 </style>
   </style>
